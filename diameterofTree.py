@@ -7,16 +7,16 @@ class TreeNode:
         
 class Answer:
     def diameterOfTree(self, root: TreeNode) -> int:
-        diameter = 0
+        res = [0]
         def dfs(root):
-            
             if not root:
-                return
-            left = 1 + dfs(root.left)
-            right = 1 + dfs(root.right)
-            
-            diameter = max(diameter, left + right)
-        return diameter
+                return -1
+            left = dfs(root.left)
+            right = dfs(root.right)
+            res[0] = max(res[0], 2+left+right)
+            return 1 + max(left, right)
+        dfs(root)
+        return res
             
 root = TreeNode("5")
 root.left = TreeNode("1")
@@ -25,6 +25,7 @@ root.left.right = TreeNode("9")
 root.right = TreeNode("3")
 root.right.right = TreeNode("4")
 root.right.left = TreeNode("2")
+root.right.left.right = TreeNode("2")
 
 
 ans = Answer()
