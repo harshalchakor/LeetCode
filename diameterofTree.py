@@ -11,8 +11,8 @@ class Answer:
         def dfs(root):
             if not root:
                 return -1
-            left = dfs(root.left)
-            right = dfs(root.right)
+            left = dfs(root.left)  # height of the left Tree
+            right = dfs(root.right)  # # height of the left Tree
             res[0] = max(res[0], 2+left+right)
             return 1 + max(left, right)
         dfs(root)
