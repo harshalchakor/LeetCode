@@ -14,8 +14,8 @@ class Answer:
         v2 = node2.val if node2 else 0
         root = TreeNode(v1 + v2)
         
-        root.left = self.InvertBinaryTree(node1.left if node1.left else None, node2.left if node2.left else None)
-        root.right = self.InvertBinaryTree(node1.right if node1.right else None, node2.right if node2.right else None)
+        root.left = self.MergeBinaryTree(node1.left if node1.left else None, node2.left if node2.left else None)
+        root.right = self.MergeBinaryTree(node1.right if node1.right else None, node2.right if node2.right else None)
         
         return root
             
