@@ -9,7 +9,9 @@ class Answer:
     def InvertBinaryTree(self, root: TreeNode) -> int:
         if not root:
             return None
+        # swap the childrens
         root.left, root.right = root.right, root.left
+        
         self.InvertBinaryTree(root.left)
         self.InvertBinaryTree(root.right)
         return root
