@@ -37,6 +37,5 @@ class Answer:
             
                     
 ans = Answer()
-# here false means Prime number or True means not a prime number
 print(ans.uniqueEmails(["x.yz@gmail.com", "xyz+name@gmail.com", "xy.z+full@gmail.com", 
                     "nitin@hotmail.com", "yz+x@gmail.com"]))
