@@ -1,6 +1,5 @@
 class Answer:
     def maxProfit(self, prices) -> int:
-        
         l, r = 0, 1
         maxProfit = 0
         
