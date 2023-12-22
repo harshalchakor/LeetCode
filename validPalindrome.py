@@ -14,11 +14,20 @@ class Answer():
             l = l + 1
             r = r - 1
         return True
+        
+        # Second Solution 
+        
+        newstr = ""
+        for c in s:
+            if c.isalnum():
+                newstr += c.lower()
+        return newstr == newstr[::-1]
     
     def isalphnum(self, c):
         return (ord('A') <= ord(c) <= ord('Z') 
                 or ord('a') <= ord(c) <= ord('z') 
                 or ord('1') <= ord(c) <= ord('9'))
+                
                 
 ans = Answer()
 print(ans.isPalindrome("    aabbaa"))
