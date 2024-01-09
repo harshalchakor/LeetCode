@@ -7,7 +7,8 @@ class Answer():
         for n in nums:
             maxSub = max(n * maxSub, n * minSub, n)
             minSub = min(n * maxSub, n * minSub, n)
-            res = max(res, maxSub, minSub)
+            
+            res = max(res, maxSub)
         
         return res
     
