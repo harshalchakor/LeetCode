@@ -2,13 +2,13 @@ class Answer():
     def maxProductSubArray(self, nums):
         
         res = max(nums)
-        maxSub, minSub = 1, 1
+        curMax, curMin = 1, 1
         
         for n in nums:
-            maxSub = max(n * maxSub, n * minSub, n)
-            minSub = min(n * maxSub, n * minSub, n)
+            curMax = max(n * curMax, n * curMin, n)
+            curMin = min(n * curMax, n * curMin, n)
             
-            res = max(res, maxSub)
+            res = max(res, curMax)
         
         return res
     
