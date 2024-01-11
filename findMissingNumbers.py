@@ -18,6 +18,16 @@ class Answer:
         for n in hashset:
             res.append(n)
         return res
+
+# Solution 2
+
+        res = len(nums)
+        
+        for i in range(len(nums)):
+            res = res + i
+            res = res - nums[i]
+            
+        return res
             
 
 ans = Answer()
