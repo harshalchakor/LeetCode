@@ -1,4 +1,4 @@
-# Number of 1 bits in integer number
+# in array of 1 to n, count the number of 1 bits in that every number of array. 
 class Answer():
     def countingBits(self, n):
         
